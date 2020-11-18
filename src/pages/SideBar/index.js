@@ -9,7 +9,7 @@ export const SideBar = () => {
         <Row style={{ minHeight: '100vh' }}>
             <div className="logo" />
             <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" >
-                <SubMenu key="sub1" icon={<UserOutlined />} title="User" >
+                <SubMenu key="sub1" icon={<UserOutlined />} title="Pages" >
                     <Menu.Item key="3"> <Link to='movies'>Movies</Link> </Menu.Item>
                     <Menu.Item key="4"><Link to='albums'>Albums</Link></Menu.Item>
                     <Menu.Item key="5"><Link to='actors'>Actors</Link></Menu.Item>
