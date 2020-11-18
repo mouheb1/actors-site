@@ -13,6 +13,7 @@ export const SideBar = () => {
                     <Menu.Item key="3"> <Link to='movies'>Movies</Link> </Menu.Item>
                     <Menu.Item key="4"><Link to='albums'>Albums</Link></Menu.Item>
                     <Menu.Item key="5"><Link to='actors'>Actors</Link></Menu.Item>
+                    <Menu.Item key="6"><Link to='serie'>Series</Link></Menu.Item>
                 </SubMenu>
             </Menu>
         </Row>

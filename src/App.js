@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import { Movie } from './pages/Movie'
 import { Album } from './pages/Album'
 import { Actor } from './pages/Actor'
+import { Serie } from './pages/Serie'
 //import { FooterPage } from './pages/Footer'
 import { NavBar } from './pages/NavBar'
 import { SideBar } from './pages/SideBar'
@@ -24,6 +25,7 @@ function App() {
             <Route path='/movies' component={Movie} />
             <Route path='/albums' component={Album} />
             <Route path='/actors' component={Actor} />
+            <Route path='/series' component={Serie} />
           </Switch>
         </Col>
       </Row>
