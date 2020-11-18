@@ -10,12 +10,13 @@ export const Serie = () => {
         axios.get('http://localhost:9080/Mediatech-project-0.0.1-SNAPSHOT/rest/Mediatech/series').then(res => {
             if (res.data) {
                 const data = res.data.results.bindings;
-                const sp = data.map(item=>item.movie.value.split('#')[1])
+                const sp = data.map(item=>item.serie.value.split('#')[1])
                 setSeries(sp)
                 setfakeSeries(sp)
             }
         })
     }, [])
+    console.log(series)
 
     const handleChange = ({ target }) => {
         const { value } = target

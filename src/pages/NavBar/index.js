@@ -7,8 +7,8 @@ export const NavBar = () => {
 
     return (
         <Layout className="layout">
-            <Header>
-        
+            <Header style={{color:"white"}}>
+            Mediatech
             </Header>
 
         </Layout>

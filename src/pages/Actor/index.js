@@ -10,7 +10,7 @@ export const Actor = () => {
         axios.get('http://localhost:9080/Mediatech-project-0.0.1-SNAPSHOT/rest/Mediatech/actors').then(res => {
             if (res.data) {
                 const data = res.data.results.bindings;
-                const sp = data.map(item=>item.movie.value.split('#')[1])
+                const sp = data.map(item=>item?.actor?.value?.split('#')[1])
                 setActors(sp)
                 setfakeActors(sp)
             }
