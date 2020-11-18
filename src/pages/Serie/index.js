@@ -2,25 +2,25 @@ import React, { useState, useEffect } from 'react'
 import { Card, Row, Col, Input } from 'antd'
 import axios from 'axios'
 import './styles.css'
-export const Actor = () => {
-    const [actors, setActors] = useState([])
-    const [fakeactors, setfakeActors] = useState([])
+export const Serie = () => {
+    const [series, setSeries] = useState([])
+    const [fakeseries, setfakeSeries] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:9080/Mediatech-project-0.0.1-SNAPSHOT/rest/Mediatech/actors').then(res => {
+        axios.get('http://localhost:9080/Mediatech-project-0.0.1-SNAPSHOT/rest/Mediatech/series').then(res => {
             if (res.data) {
                 const data = res.data.results.bindings;
                 const sp = data.map(item=>item.movie.value.split('#')[1])
-                setActors(sp)
-                setfakeActors(sp)
+                setSeries(sp)
+                setfakeSeries(sp)
             }
         })
     }, [])
 
     const handleChange = ({ target }) => {
         const { value } = target
-        const filtredActors = actors.filter(actor => actor.search(value) !== -1)
-        setfakeActors(filtredActors)
+        const filtredSeries = series.filter(serie => serie.search(value) !== -1)
+        setfakeSeries(filtredSeries)
     }
     return (
         <Card className='container' style={{ backgroundColor: 'gray' }}>
@@ -30,11 +30,11 @@ export const Actor = () => {
                     <Input placeholder='Search' name='search' onChange={handleChange} />
                 </Col>
             </Row>
-            {fakeactors && fakeactors.length !==0 && fakeactors.map((actor,index) => (
+            {fakeseries && fakeseries.length !==0 && fakeseries.map((serie,index) => (
                 <Row key={index} gutter={[16, 16]}>
                     <Col span={8}>
-                        <Card  className='actor'>
-                            {actor}
+                        <Card  className='serie'>
+                            {serie}
                      </Card>
                     </Col>
                 </Row>

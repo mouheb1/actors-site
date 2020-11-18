@@ -17,7 +17,6 @@ export const Movie = () => {
         })
     }, [])
 
-    console.log(movies)
     const handleChange = ({ target }) => {
         const { value } = target
         const filtredMovies = movies.filter(movie => movie.search(value) !== -1)

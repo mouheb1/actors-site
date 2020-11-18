@@ -17,7 +17,6 @@ export const Album = () => {
         })
     }, [])
 
-    console.log(albums)
     const handleChange = ({ target }) => {
         const { value } = target
         const filtredAlbums = albums.filter(album => album.search(value) !== -1)
